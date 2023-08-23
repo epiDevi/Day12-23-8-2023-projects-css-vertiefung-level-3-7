@@ -1,0 +1,374 @@
+:root{
+    --dunkle-grau:#3A4F52;
+    --grau:#6A6A6A;
+    --dunkel-gruen:#3A4F52;
+    --blau: #4DA7CA;
+}
+
+@font-face {
+    font-family: Alegreya Sa;
+    src: url(../fonts/AlegreyaSans-Medium.ttf);
+}
+@font-face {
+    font-family: Alegrya SC;
+    src: url(../fonts/AlegreyaSC-Medium.ttf);
+}
+@font-face {
+    font-family: Alegrya SC Regular;
+    src: url(../fonts/AlegreyaSC-Regular.ttf);
+}
+@font-face {
+    font-family: Helvetiva ;
+    src: url(../fonts/Helvetica\ Neue\ Regular.otf);
+}
+@font-face {
+    font-family: NixieOne;
+    src: url(../fonts/NixieOne-Regular.ttf);
+}
+/* *********  allgemein ******** */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 62.5%;
+    background: rgb(251, 248, 244);
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+p , a{
+    font-family: Helvetiva,Arial, Helvetica, sans-serif;
+}
+/* *********  header ******** */
+header{
+    background: url("../img/header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+.nav{
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav h2{
+    margin: 15px 30px;
+    font-family: Alegrya SC, Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    line-height: 10px;
+    font-weight: 100;
+
+}
+.nav h2:hover{
+    text-decoration: underline;
+}
+.burger-wrapper{
+    padding: 15px 30px;
+}
+.burger{
+    height: 3px;
+    width: 30px;
+    background: white;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 74%;
+    text-align: center;
+}
+.header-content h1{
+    font-size: clamp(2.45rem,3.68vw, 3.68rem);
+    font-family: NixieOne, Arial, Helvetica, sans-serif;
+}
+.header-content p{
+font-family: Alegrya SC Regular, Arial, Helvetica, sans-serif;
+font-size: clamp(1.05rem, 1.4vw, 1.4rem);
+opacity: 0.4;
+}
+
+/* *********  main ******** */
+
+/* ******* gallery ******** */
+.gallery , .blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titel-gallery{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 40px;
+}
+
+.titel-gallery h2{
+    font-family: Alegreya Sa, Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: var(--dunkle-grau);
+}
+
+.titel-gallery p{
+    
+    font-size: 14px;
+    color: var(--grau);
+    margin-top: 15px;
+}
+
+.titel-gallery a{
+    color: var(--grau);
+    border: 1px solid var(--grau);
+    padding: 5px 13px;
+    font-size: 18px;
+}
+
+.titel-gallery a:hover{
+    color: white;
+    border: 1px solid white;
+    background: var(--dunkel-gruen);
+}
+
+.fotos{
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 80%;
+}
+.fotos img{
+    width: 370px;
+    height: 225px;
+}
+
+.bild{
+    position: relative;
+    
+}
+
+.box-over{
+    background: var(--dunkel-gruen);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    
+}
+
+.box-over a{
+    margin: auto;
+    padding: 10px 15px;
+    border: 1px solid white;
+    color: white;
+}
+
+.bild:hover  .box-over{
+    opacity: 0.5;
+}
+
+.bild:hover  .img{
+    
+	transform: scale(1.5);
+    transition: transform 0.3s ease; 
+    
+}
+.bild:hover{
+    overflow: hidden;
+}
+.box-over a:hover{
+    background: white;
+    color: var(--dunkle-grau);
+    opacity: 1;
+}
+
+/* ******* Services ******** */
+
+.services{
+    
+    background: url("../img/gelbeSofa.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.services .content, .free .content{
+    width: 80%;
+    height: 80%;
+    background: rgba(99, 99, 99, 0.342);
+    margin: 60px;
+}
+
+.services .content .titel h2 , .free .content .titel h2{
+    font-family: Alegreya Sa, Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    margin-top: 20px;
+}
+.services .content .titel p{
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.flex{
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.services .content .caption{
+    width: 226px;
+}
+
+.services .content .caption img{
+    width: 60px;
+}
+
+.services .content .caption h3{
+    font-family: Alegreya Sa, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.services .content .caption p{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ******* Blog ********  */
+.info {
+    margin: 40px auto;
+    display: flex;
+    gap: 20px;
+    width: 80%;
+}
+.info img{
+    width: 365px;
+}
+.info h2{
+    margin-top: 20px;
+    font-family: Alegreya Sa, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.info p{
+    font-size: 14px;
+    width: 363px;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.info a{
+    color: var(--blau);
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.info a:hover{
+    text-decoration: underline;
+}
+
+/* ****** free */
+.free{
+    background: url("../img/parallax2.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.free .titel{
+    height: 250px;
+    padding: 10px 18px;
+}
+.free a{
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+/* ******* Teams ******** */
+.teams{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.teams .content{
+    width: 80%;
+    height: 80%;
+    margin: 60px;
+}
+
+.teams .content .titel h2 {
+    font-family: Alegreya Sa, Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    margin-top: 20px;
+}
+.teams .content .titel p{
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+
+.teams .content .caption{
+    width: 291px;
+}
+
+.teams .content .caption img{
+    width: 150px;
+}
+
+.teams .content .caption p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.teams .content .caption p:nth-of-type(2){
+    font-weight: bold;
+}
+.teams .content .caption p:nth-of-type(3){
+    margin-top: 0;
+    
+}
